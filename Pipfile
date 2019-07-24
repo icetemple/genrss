@@ -7,6 +7,9 @@ verify_ssl = true
 pytest = "*"
 coverage = "*"
 coveralls = "*"
+docutils = "*"
+Sphinx = "*"
+sphinx-autodoc-typehints = "*"
 
 [packages]
 lxml = "*"
