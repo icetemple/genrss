@@ -1,22 +1,46 @@
-.. GenRSS documentation master file, created by
-   sphinx-quickstart on Wed Jul 24 11:05:33 2019.
-   You can adapt this file completely to your liking, but it should at least
-   contain the root `toctree` directive.
+.. rst-class: hide-header
 
-Welcome to GenRSS's documentation!
-==================================
+Welcome to GenRSS!
+==================
 
-.. automodule:: genrss
-   :members:
+This is generator of rss feed for your channel. Easy for config and usage.
+
+Get started with :ref:`installation` and then get an overview with
+the :ref:`quickstart`. The rest of the docs describe each component
+of GenRSS in detail, with a full reference in the :ref:`api` section.
+
+
+User's Guide
+------------
 
 .. toctree::
    :maxdepth: 2
-   :caption: Contents:
+
+   installation
+   quickstart
 
 
-Indices and tables
-==================
+API Reference
+-------------
 
-* :ref:`genindex`
-* :ref:`modindex`
-* :ref:`search`
+If you are looking for information on a specific function, class or
+method, this part of the documentation is for you.
+
+.. toctree::
+   :maxdepth: 2
+
+   api
+
+
+Additional notes
+----------------
+
+legal information and changelog are here for the interested.
+
+
+.. toctree::
+   :maxdepth: 2
+
+   changelogs
+
+

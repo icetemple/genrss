@@ -228,10 +228,11 @@
         },
         "docutils": {
             "hashes": [
-                "sha256:ba4584f9107571ced0d2c7f56a5499c696215ba90797849c92d395979da68521"
+                "sha256:554158db07870b514e8df93800e95ee8fbf2a2388eb453c7f69206532a8a6fa5",
+                "sha256:82725b1051b92aaa42e240a4e5d6fafa2f6f5a2b5023b23a51c941dd7d863369"
             ],
             "index": "pypi",
-            "version": "==0.15.post1"
+            "version": "==0.15.1"
         },
         "enum34": {
             "hashes": [
@@ -340,7 +341,7 @@
                 "sha256:2156525d6576d21c4dcaddfa427fae887ef89a7a9de5cbfe0728b3aafa78427e",
                 "sha256:446014523bb9be5c28128c4d2a10ad6bb60769e78bd85658fe44a450674e0ef8"
             ],
-            "markers": "python_version < '3.6'",
+            "markers": "python_version == '3.4.*' or python_version < '3'",
             "version": "==2.3.4"
         },
         "pluggy": {

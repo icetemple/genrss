@@ -8,7 +8,7 @@ with open('README.md', 'r') as f:
 if __name__ == '__main__':
     setup(
         name='genrss',
-        version='1.0.1',
+        version='1.0.2',
         author='Dmitriy Pleshevskiy',
         author_email='dmitriy@ideascup.me',
         description='RSS feed generator for python',

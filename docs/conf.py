@@ -40,9 +40,7 @@ release = '1.0.0'
 # ones.
 extensions = [
     'sphinx.ext.autodoc',
-    'sphinx.ext.doctest',
-    'sphinx.ext.coverage',
-    'sphinx_autodoc_typehints'
+    'sphinx.ext.intersphinx'
 ]
 
 # Add any paths that contain templates here, relative to this directory.
@@ -84,7 +82,17 @@ html_theme = 'alabaster'
 # further.  For a list of options available for each theme, see the
 # documentation.
 #
-# html_theme_options = {}
+html_theme_options = {
+    'github_user': 'icetemple',
+    'github_repo': 'genrss',
+    'canonical_url': 'https://genrss.readthedocs.io/en/latest/',
+    'description': 'RSS generator for python',
+    'fixed_sidebar': True,
+    'github_banner': True,
+    'github_button': True,
+    'travis_button': True,
+}
+
 
 # Add any paths that contain custom static files (such as style sheets) here,
 # relative to this directory. They are copied after the builtin static files,
@@ -99,7 +107,13 @@ html_static_path = ['_static']
 # default: ``['localtoc.html', 'relations.html', 'sourcelink.html',
 # 'searchbox.html']``.
 #
-# html_sidebars = {}
+html_sidebars = {
+    '**': [
+        'about.html',
+        'localtoc.html',
+        'navigations.html',
+    ]
+}
 
 
 # -- Options for HTMLHelp output ---------------------------------------------
