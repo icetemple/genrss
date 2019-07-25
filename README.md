@@ -12,7 +12,7 @@ RSS generator for python
 
 Install and update using pip:
 
-``pip install genrss``
+``pip install -U genrss``
 
 
 ## A Simple Example
