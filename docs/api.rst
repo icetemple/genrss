@@ -7,3 +7,9 @@ API
 
 .. autoclass:: GenRSS
    :members:
+
+.. autoclass:: Item
+   :members:
+
+.. autoclass:: Enclosure
+   :members:
