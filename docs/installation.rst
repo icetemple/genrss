@@ -24,7 +24,7 @@ Install GenRSS
 
 Use the following command to install GenRSS:
 
-``pip install genrss``
+``pip install -U genrss``
 
 GenRSS is now installed. Check out :ref:`quickstart`
 
