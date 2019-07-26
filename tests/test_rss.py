@@ -3,7 +3,7 @@ from textwrap import dedent
 
 import pytz
 import pytest
-from genrss import RSS_DEFAULT_GENERATOR
+from genrss import RSS_DEFAULT_GENERATOR, Item
 from tests.support import create_rss
 
 
@@ -109,3 +109,11 @@ def test_feed_categories():
     assert xml
     assert '<category><![CDATA[Category 1]]></category>' \
            '<category><![CDATA[Category 2]]></category>' in xml
+
+
+def test_feed_bad_items():
+    feed = create_rss(items=['item'])
+    xml = feed.xml()
+    assert xml
+    assert '<item>' not in xml
+
