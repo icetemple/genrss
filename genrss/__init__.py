@@ -239,6 +239,6 @@ class GenRSS:
         """
         root = self.to_element()
 
-        return '<?xml version="1.0" encoding="UTF-8"?>\n' \
-               + ('\n' if pretty else '') \
-               + tostring(root, pretty_print=pretty).decode('utf-8')
+        return tostring(root, pretty_print=pretty, xml_declaration=True,
+                        encoding='UTF-8').\
+            decode('utf-8')

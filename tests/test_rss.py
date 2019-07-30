@@ -40,7 +40,7 @@ def test_feed_description(description, expose):
 
 
 @pytest.mark.parametrize('copyright, expose', [
-    pytest.param('copyright © genrss', 'copyright &#169; genrss', id='copy'),
+    pytest.param('copyright © genrss', 'copyright © genrss', id='copy'),
 ])
 def test_feed_copyright(copyright, expose):
     feed = create_rss(copyright=copyright)
