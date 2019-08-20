@@ -92,15 +92,16 @@ def test_item_enclosure(feed):
     create_item(feed, enclosure=enclosure)
     xml = feed.xml()
     assert xml
-    assert '<enclosure length="{}" type="{}" url="{}"/>' \
-           '</item>'.format(0, 'image/jpeg', enclosure.url) in xml
+    assert '<enclosure url="{url}" length="{length}" type="{type}"/>' \
+           '</item>'.format(length=0, type='image/jpeg',
+                            url=enclosure.url) in xml
 
 
 def test_item_enclosure_from_dict(feed, enclosure_dict):
     create_item(feed, enclosure=enclosure_dict)
     xml = feed.xml()
     assert xml
-    assert '<enclosure length="{}" type="{}" url="{}"/>' \
-           '</item>'.format(enclosure_dict.get('size', 0),
-                            enclosure_dict.get('type', 'image/jpeg'),
-                            enclosure_dict.get('url')) in xml
+    assert '<enclosure url="{url}" length="{length}" type="{type}"/>' \
+           '</item>'.format(length=enclosure_dict.get('size', 0),
+                            type=enclosure_dict.get('type', 'image/jpeg'),
+                            url=enclosure_dict.get('url')) in xml
