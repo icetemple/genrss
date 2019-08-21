@@ -1,9 +1,9 @@
 import mimetypes
-from typing import Dict, Union
+from typing import Dict, Union, TypeVar, Dict
 
 from .utils import ElementT, create_element
 
-__all__ = ('Enclosure',)
+__all__ = ('Enclosure', 'EnclosureOrDictT')
 
 
 class Enclosure:
@@ -24,9 +24,10 @@ class Enclosure:
         return create_element('enclosure', url=self.url, length=str(self.size),
                               type=self.type)
 
-    @staticmethod
-    def from_dict(data: Dict[str, Union[str, int]]):
+    @classmethod
+    def from_dict(cls, data: Dict[str, Union[str, int]]):
         """Makes enclosure data from dict."""
-        return Enclosure(data.get('url'), data.get('size'), data.get('type'))
+        return cls(**data)
 
 
+EnclosureOrDictT = Union[Enclosure, Dict]
