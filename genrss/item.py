@@ -1,10 +1,11 @@
 from datetime import datetime
-from typing import Optional, List
+from typing import Optional, List, Union, Dict
 
 from lxml.etree import CDATA
 
 from .utils import ElementT, create_element
-from .enclosure import Enclosure
+from .enclosure import Enclosure, EnclosureOrDictT
+from .image import Image
 
 __all__ = ('Item',)
 
@@ -25,6 +26,7 @@ class Item:
     :param categories: If provided, each array item will be added as a
         category element
     :param enclosure: An enclosure object
+    :param image: An image object
     :param pub_date: The date and time of when the item was created.
         Feed readers use this to determine the sort order. Some readers
         will also use it to determine if the content should be presented
@@ -38,11 +40,15 @@ class Item:
         self.guid: Optional[str] = kwargs.pop('guid', None)
         self.author: Optional[str] = kwargs.pop('author', None)
         self.categories: List[str] = kwargs.pop('categories', [])
-        self.enclosure: Optional[Enclosure] = kwargs.pop('enclosure', None)
+        self.enclosure: Optional[Enclosure, Dict] = kwargs.pop('enclosure',
+                                                               None)
+        self.image: Optional[Image, Dict] = kwargs.pop('image', None)
         self.pub_date: Optional[datetime] = kwargs.pop('pub_date', None)
 
         if isinstance(self.enclosure, dict):
             self.enclosure = Enclosure.from_dict(self.enclosure)
+        if isinstance(self.image, dict):
+            self.image = Image.from_dict(self.image)
 
     def to_element(self) -> ElementT:
         """Returns item element for xml."""
