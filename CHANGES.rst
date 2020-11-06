@@ -1,5 +1,12 @@
 .. currentmodule:: genrss
 
+Version 1.0.5
+-------------
+
+Released 2020-11-06
+
+- Update lxml version
+
 
 Version 1.0.3
 -------------
