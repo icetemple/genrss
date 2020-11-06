@@ -19,7 +19,7 @@ if __name__ == '__main__':
         license='MIT',
         packages=['genrss'],
         install_requires=[
-            'lxml==4.3.4',
+            'lxml>=4.3.4',
             'pytz==2019.1'
         ]
     )

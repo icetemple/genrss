@@ -10,9 +10,24 @@ RSS generator for python
 
 ## Installing
 
+genrss using lxml library that required:
+
+* libxml2 version 2.9.2 or later.
+* libxslt version 1.1.27 or later.
+
+To install the required development packages of these dependencies on Linux systems,
+use your distribution specific installation tool, e.g. apt-get on Debian/Ubuntu:
+
+```bash
+sudo apt-get install libxml2-dev libxslt-dev
+```
+
+
 Install and update using pip:
 
-``pip install -U genrss``
+```bash
+pip install -U genrss
+```
 
 
 ## A Simple Example
