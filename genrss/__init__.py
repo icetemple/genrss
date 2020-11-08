@@ -100,7 +100,7 @@ class GenRSS:
         channel_image = self.image
         if not channel_image and self.image_url:
             channel_image = Image(self.image_url, self.site_url, self.title)
-        if isinstance(image, Image):
+        if isinstance(channel_image, Image):
             channel.append(channel_image.to_element())
 
         for category in self.categories:

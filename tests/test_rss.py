@@ -80,10 +80,15 @@ def test_feed_image_url():
     image_url = 'https://s3.smartfridge.me/image.jpg'
     feed = create_rss(image_url=image_url)
     xml = feed.xml()
+
     assert xml
-    assert (f'<image><url>{image_url}</url>'
+    assert (
+        '<image>'
+            f'<url>{image_url}</url>'
+            '<link>https://smartfridge.me/</link>'
             '<title><![CDATA[SmartFridge]]></title>'
-            '<link>https://smartfridge.me/</link></image>') in xml
+        '</image>'
+    ) in xml
 
 
 def test_feed_webmaster():
