@@ -1,5 +1,13 @@
 .. currentmodule:: genrss
 
+Version 1.0.6
+-------------
+
+Released 2020-11-08
+
+- Fix channel image
+
+
 Version 1.0.5
 -------------
 
