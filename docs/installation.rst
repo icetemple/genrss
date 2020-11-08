@@ -13,10 +13,15 @@ Python 3.6 and newer.
 Dependencies
 ------------
 
-These distributions will be installed automatically when installing GenRSS.
+genrss using lxml library that required:
 
-* ``lxml==4.3.4``
-* ``pytz==2019.1``
+* libxml2 version 2.9.2 or later.
+* libxslt version 1.1.27 or later.
+
+To install the required development packages of these dependencies on Linux systems,
+use your distribution specific installation tool, e.g. apt-get on Debian/Ubuntu:
+
+``sudo apt-get install libxml2-dev libxslt-dev``
 
 
 Install GenRSS
