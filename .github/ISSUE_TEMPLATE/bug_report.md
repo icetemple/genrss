@@ -14,12 +14,13 @@ A clear and concise description of what the bug is.
 Steps to reproduce the behavior:
 1. ...
 
-### Expected Behavior
-<!-- Tell us what should happen. -->
-
 ```python
 # Paste a minimal example that causes the problem.
 ```
+
+### Expected Behavior
+<!-- Tell us what should happen. -->
+
 
 ### Actual Behavior
 <!-- Tell us what happens instead. -->
